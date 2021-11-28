@@ -30,6 +30,7 @@ const Counter = () => {
       )
       .then((response) => { setshowLoader(false) });
     handleWidth();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter]);
 
   const incrementCount = (e) => {
