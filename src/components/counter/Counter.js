@@ -47,7 +47,6 @@ const Counter = () => {
     if (isNaN(counter))
       setCounter(0)
     else {
-      if (counter >= MAX) return;
       setCounter(counter - 1);
       handleWidth()
     }
