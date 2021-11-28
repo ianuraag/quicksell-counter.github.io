@@ -33,28 +33,31 @@ const Counter = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter]);
 
-  const incrementCount = (e) => {
+  const incrementCount = () => {
     if (isNaN(counter))
       setCounter(0)
     else {
       if (counter >= MAX) return;
       setCounter(counter + 1);
-      handleWidth(e)
+      handleWidth()
     }
   };
 
-  const decrementCount = (e) => {
+  const decrementCount = () => {
     if (isNaN(counter))
       setCounter(0)
     else {
       if (counter >= MAX) return;
       setCounter(counter - 1);
-      handleWidth(e)
+      handleWidth()
     }
   };
 
   const handleChange = (event) => {
-    setCounter(parseInt(event.target.value));
+    if(parseInt(event.target.value)>MAX)
+      return;
+    else
+      setCounter(parseInt(event.target.value));
   };
 
   const returnWidth = () => {
