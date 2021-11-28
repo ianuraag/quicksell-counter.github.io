@@ -76,15 +76,15 @@ const Counter = () => {
         {showLoader ? <div><div className="spinner"></div><span>Saving counter value</span></div> : ''}
       </div>
       <div className="buttons">
-        <div className="box box-1">
-          <button onClick={decrementCount}>-</button>
-        </div>
+        
+          <button className="box box-1" onClick={decrementCount}>-</button>
+        
         <div className="box box-2">
           <input ref={inputRef} className="input-number" onKeyDown={handleWidth} type="number" max={MAX} value={counter} onChange={handleChange} />
         </div>
-        <div className="box box-3">
-          <button onClick={incrementCount}>+</button>
-        </div>
+        
+          <button className="box box-3" onClick={incrementCount}>+</button>
+        
       </div>
       <Display counter={counter} />
     </div>

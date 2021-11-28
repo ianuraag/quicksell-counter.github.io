@@ -36,8 +36,8 @@ body{
   font-family: Avenir-Bold;
 }
 .box-1 {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-radius: 8px 0px 0px 8px;
+  display: block;
   color: #b24242;
   width: 60px;
 }
@@ -48,8 +48,8 @@ body{
   min-width: 60px;
 }
 .box-3 {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 0px 8px 8px 0px;
+  display: block;
   background-color: #b24242;
   color: whitesmoke;
   width: 60px;
