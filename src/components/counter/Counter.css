@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Avenir;
+    src: url("./AvenirLTStd-Book.otf") format("opentype");
+}
+@font-face {
+    font-family: Avenir-Bold;
+    src: url("./AvenirLTStd-Black.otf") format("opentype");
+}
+body{
+    font-family: Avenir;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.count {
+  margin-left: 4px;
+  margin-top: 4px;
+}
+.loader {
+  min-height: 21px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.box {
+  display: flex;
+  border: 1px solid #b24242;
+  font-size: 21px;
+  font-weight: 900;
+  text-align: center;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  font-family: Avenir-Bold;
+}
+.box-1 {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #b24242;
+  width: 60px;
+}
+.box-2 {
+  color: #b24242;
+  background-color: #fbe8e8;
+  padding: 0;
+  min-width: 60px;
+}
+.box-3 {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #b24242;
+  color: whitesmoke;
+  width: 60px;
+}
+.buttons {
+  display: flex;
+}
+button {
+  display: flex;
+  all: unset;
+  cursor: pointer;
+  border-radius: 8px;
+}
+input {
+  all: unset;
+  padding: 0 14px;
+  overflow: visible;
+}
+span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  margin-left: -5px;
+  border-radius: 50%;
+  border-top: 2px solid grey;
+  border-right: 2px solid transparent;
+  animation: spinner 0.6s linear infinite;
+}
+.loader span {
+  margin-left: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
