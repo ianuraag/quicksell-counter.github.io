@@ -55,7 +55,7 @@ const Counter = () => {
 
   const handleChange = (event) => {
     if(parseInt(event.target.value)>MAX)
-      return;
+      setCounter(MAX);
     else
       setCounter(parseInt(event.target.value));
   };
